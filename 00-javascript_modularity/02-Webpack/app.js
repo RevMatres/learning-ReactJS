@@ -127,7 +127,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_js__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__functions_js__);
 
 //
 //
@@ -151,8 +150,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import the class Person from classes.js
 
 
-// import { Person, Cat } from "classes.js"
-
 // import setPref function from functions.js
 
 
@@ -169,7 +166,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__helpers_js__["a" /* log */])("Hello World!")
 Object(__WEBPACK_IMPORTED_MODULE_0__helpers_js__["a" /* log */])(__WEBPACK_IMPORTED_MODULE_1__data_js__)
 
 // try out the class from classes.js
-Object(__WEBPACK_IMPORTED_MODULE_0__helpers_js__["a" /* log */])(new __WEBPACK_IMPORTED_MODULE_2__classes_js__["default"]("Hans", 3, "purple") )
+Object(__WEBPACK_IMPORTED_MODULE_0__helpers_js__["a" /* log */])(new __WEBPACK_IMPORTED_MODULE_2__classes_js__["Person"]("Hans", 3, "purple") )
 
 let Tipsi = new __WEBPACK_IMPORTED_MODULE_2__classes_js__["Cat"]("Tipsi", "orange")
 Object(__WEBPACK_IMPORTED_MODULE_0__helpers_js__["a" /* log */])(Tipsi.name, Tipsi.furrColor)
@@ -177,7 +174,7 @@ Tipsi.purr(3)
 
 // try out setPref from functions.js
 // setPref assigns a random Fruit to each Person from People
-Object(__WEBPACK_IMPORTED_MODULE_3__functions_js__["default"])(__WEBPACK_IMPORTED_MODULE_1__data_js__["People"], __WEBPACK_IMPORTED_MODULE_1__data_js__["Fruit"])
+Object(__WEBPACK_IMPORTED_MODULE_3__functions_js__["a" /* setPref */])(__WEBPACK_IMPORTED_MODULE_1__data_js__["People"], __WEBPACK_IMPORTED_MODULE_1__data_js__["Fruit"])
 Object(__WEBPACK_IMPORTED_MODULE_0__helpers_js__["a" /* log */])(__WEBPACK_IMPORTED_MODULE_1__data_js__["People"])
 
 
@@ -265,9 +262,93 @@ let People = {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module parse failed: Unexpected token (78:7)\nYou may need an appropriate loader to handle this file type.\n| //\n| \n| export setPref\n| /* Note:\n|     setPref requires all the other functions in FUNCTIONS.JS, but those aren't exported");
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return setPref; });
+
+//
+//
+//    FUNCTIONS.JS
+//    This module contains all the cool functions
+//
+//
+
+// =============================================================================
+
+//
+//  Definitions
+//
+
+// return a random number
+function rand(){
+  return Math.random()
+}
+
+// return a random Index from an array
+function returnRandomIndex(array){
+  let length = array.length
+  let randomNumber = rand()
+  let randomIndex
+
+  // find the index corresponding to the random number
+  for(var i=1; i<=length; i++){
+    if(randomNumber <= (i/length)){
+      randomIndex = i-1
+      break
+    }
+  }
+
+  return randomIndex
+
+  /*
+    Explanation
+      the array's length defines fractions between 0 and 1
+      the random number falls into one of the intervals between the fractions
+      since the intervals correspond to the fractions, they correspond to the indices in the array
+      the interval the rand falls into is found, it's corresponding index is returned
+
+    Example
+      length = 3; rand = 0.4
+
+      i=1
+      i/length = 1/3
+        --> rand > 1/3
+
+      i=2
+      i/length = 2/3 = 0.6666
+        --> rand < 2/3
+        ==> return "second position of Array has been chosen"
+  */
+}
+
+// get an object's keys
+function keys(obj){
+  return Object.keys(obj)
+}
+
+// set People's fruit preferences
+function setPref(peopleObject, fruitObject){
+  let people = keys(peopleObject)
+
+  people.forEach( val => {
+    let fruitInd = returnRandomIndex(fruitObject)
+    peopleObject[val].setFruitPreference(fruitObject, fruitInd)
+  })
+}
+
+// =============================================================================
+
+//
+//  Exports from FUNCTIONS.JS
+//
+
+
+/* Note:
+    setPref requires all the other functions in FUNCTIONS.JS, but those aren't exported
+    Those necessary functions are HIDDEN INFORMATION
+*/
+
 
 /***/ })
 /******/ ]);
