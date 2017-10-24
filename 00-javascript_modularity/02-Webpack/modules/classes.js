@@ -41,6 +41,4 @@ class Cat {
 //  Exports from CLASSES.JS
 //
 
-export default class Person
-
-export Cat
+export { Person, Cat }
