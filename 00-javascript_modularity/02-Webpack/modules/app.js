@@ -13,7 +13,7 @@
 //
 
 // import the log object from the exports of helpers.js
-import { log } from "./helper.js"
+import { log } from "./helpers.js"
 
 // import all exports from data.js
 import * as data from "./data.js"
