@@ -75,7 +75,7 @@ function setPref(peopleObject, fruitObject){
 //  Exports from FUNCTIONS.JS
 //
 
-export setPref
+export { setPref }
 /* Note:
     setPref requires all the other functions in FUNCTIONS.JS, but those aren't exported
     Those necessary functions are HIDDEN INFORMATION
