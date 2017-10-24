@@ -24,7 +24,7 @@ import {Cat} from "./classes.js"
 // import { Person, Cat } from "classes.js"
 
 // import setPref function from functions.js
-import setPref from "./function.js"
+import setPref from "./functions.js"
 
 // =============================================================================
 
