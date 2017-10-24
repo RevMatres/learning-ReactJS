@@ -41,8 +41,6 @@ class Cat {
 //  Exports from CLASSES.JS
 //
 
-// export default class Person
 module.exports.Person = Person
 
-// export Cat
 module.exports.Cat = Cat

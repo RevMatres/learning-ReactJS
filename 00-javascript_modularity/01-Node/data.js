@@ -37,6 +37,5 @@ let People = {
 //  Exports from DATA.JS
 //
 
-// export { Fruit, People }
 module.exports.Fruit = Fruit
 module.exports.People = People

@@ -21,8 +21,4 @@ function log(){let a=arguments;console.log(...a)}
 //  Exports from HELPERS.JS
 //
 
-//  ES6 compliant Syntax, not currently supported
-// export { log }
-
-//  NodeJS compliant Syntax
 module.exports.log = log      // == ( exports.log = log )

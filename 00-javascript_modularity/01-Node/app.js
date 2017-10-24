@@ -12,26 +12,6 @@
 //  Imports from other modules
 //
 
-// import the log object from the exports of helpers.js
-// import { log } from "helper.js"
-
-// import all exports from data.js
-// import * as data from "data.js"
-
-// import the class Person from classes.js
-// import Person from "classes.js"
-// import {Cat} from "classes.js"
-// import { Person, Cat } from "classes.js"
-
-// import setPref function from functions.js
-// import setPref from "function.js"
-
-// =============================================================================
-
-//
-//  Imports using NodeJS' Syntax
-//
-
 // import all exports from data.js
 const data = require("./data.js")
 

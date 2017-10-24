@@ -75,7 +75,6 @@ function setPref(peopleObject, fruitObject){
 //  Exports from FUNCTIONS.JS
 //
 
-// export default function setPref
 module.exports.setPref = setPref
 /* Note:
     setPref requires all the other functions in FUNCTIONS.JS, but those aren't exported
