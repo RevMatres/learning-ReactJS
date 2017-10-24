@@ -24,7 +24,7 @@ function returnRandomIndex(array){
   let randomIndex
 
   // find the index corresponding to the random number
-  for(i=1; i<=length; i++){
+  for(var i=1; i<=length; i++){
     if(randomNumber <= (i/length)){
       randomIndex = i-1
       break
