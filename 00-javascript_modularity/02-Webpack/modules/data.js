@@ -26,9 +26,9 @@ let Fruit = ['banana', 'apple', 'tangerine', 'melon', 'cherry']
 
 // object
 let People = {
-  p1: new Person("George", 21, "blue"),
-  p2: new Person("Dieter", 22, "orange"),
-  p3: new Person("Emily", 23, "a very dark bloody red")
+  p1: new Person("George", 21, "the lightest hue of Sky-Blue"),
+  p2: new Person("Dieter", 22, "bright and burning: Orange"),
+  p3: new Person("Emily", 23, "a very dark bloody Red")
 }
 
 // =============================================================================
