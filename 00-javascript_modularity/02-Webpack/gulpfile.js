@@ -34,8 +34,8 @@ gulp.task('default', function(){
 // webpack task
 gulp.task('webpack', function(){
   return gulp.src('./modules/app.js')
-  .pipe(webpack( require('./webpack.config.js') ))
-  .pipe(gulp.dest('./'))
+             .pipe(webpack( require('./webpack.config.js') ))
+             .pipe(gulp.dest('./'))
 })
 
 // watch tasks
