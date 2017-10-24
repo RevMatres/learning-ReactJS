@@ -19,12 +19,10 @@ import { log } from "./helpers.js"
 import * as data from "./data.js"
 
 // import the class Person from classes.js
-import Person from "./classes.js"
-import {Cat} from "./classes.js"
-// import { Person, Cat } from "classes.js"
+import { Person, Cat } from "classes.js"
 
 // import setPref function from functions.js
-import setPref from "./functions.js"
+import { setPref } from "./functions.js"
 
 // =============================================================================
 
